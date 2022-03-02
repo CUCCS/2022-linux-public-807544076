@@ -13,38 +13,38 @@
 
 0.打开虚拟机，用主机的 cmd 命令行 `ssh` 指令连接
 
-![login in](picture/login_in.png)
+![login in](chap0x01/picture/login_in.png)
 
 ---
 
 1.用 `lsb_release -a` 查询当前Linux发行版基本信息
 
-![release info](picture/release.png)
+![release info](chap0x01/picture/release.png)
 
 ---
 
 2.用 `uname -srm` 查询当前Linux内核版本信息
 
-![core info](picture/core.png)
+![core info](chap0x01/picture/core.png)
 
 ---
 
 3.
 首先在虚拟机设置页面添加新的网卡 `网卡3` 在 Ubuntu 内显示为 `enp0s9`
 
-![add new network](picture/add_new_network.png)
+![add new network](chap0x01/picture/add_new_network.png)
 
 用 `ifconfig` 和 `ifconfig -a` 分别查看工作网卡和所有网卡
 
 工作网卡：
-![](picture/working_network.png)
+![](chap0x01/picture/working_network.png)
 所有网卡：
-![](picture/all_network.png)
+![](chap0x01/picture/all_network.png)
 
 发现新添加的 `enp0s9` 网卡未启用
 用 `sudo vi /etc/netplan/00-installer-config.yaml` 打开配置文件
 
-![setting](picture/setting.png)
+![setting](chap0x01/picture/setting.png)
 
 在其下添加新的配置：
 
@@ -53,15 +53,15 @@ enp0s9:
     dhcp4: true
 ```
 
-![add setting](picture/add_setting.png)
+![add setting](chap0x01/picture/add_setting.png)
 
 随后保存退出文档，使用 `sudo netplan apply` 指令应用更改
 
-![apply setting](picture/apply_setting.png)
+![apply setting](chap0x01/picture/apply_setting.png)
 
 重启虚拟机并重新连接，再次查看网卡工作情况，发现其自动开始工作并获取ip
 
-![applying](picture/applying.png)
+![applying](chap0x01/picture/applying.png)
 
 ---
 
@@ -74,17 +74,17 @@ enp0s9:
 ```
 scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 ```
-![sent file](picture/scp_sent_file.png)
+![sent file](chap0x01/picture/scp_sent_file.png)
 
 传输成功后连接虚拟机查看结果
 
-![check](picture/check_file.png)
+![check](chap0x01/picture/check_file.png)
 
 4.2 用 `scp` 传输文件至远程Linux系统
 
 利用阿里云线上云服务的环境创建远程虚拟机：
 
-![create remote linux](picture/create_remote_linux.png)
+![create remote linux](chap0x01/picture/create_remote_linux.png)
 
 用 `scp` 传输文件 `test.txt`
 
@@ -92,11 +92,11 @@ scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 scp C:\Users\lenovo\Desktop\test.txt root@101.133.153.138:~
 ```
 
-![sent file](picture/sent_file.png)
+![sent file](chap0x01/picture/sent_file.png)
 
 在云端主机查看：
 
-![check](picture/sent_to_remote.png)
+![check](chap0x01/picture/sent_to_remote.png)
 
 ---
 
@@ -113,7 +113,7 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-![](picture/cat.png)
+![](chap0x01/picture/cat.png)
 
 设置属性：
 
@@ -122,20 +122,20 @@ sudo chmod 600 authorized_keys
 sudo chmod 700 ~/.ssh
 ```
 
-![](picture/chmod.png)
+![](chap0x01/picture/chmod.png)
 
 修改 Ubuntu 的 `/etc/ssh/sshd_config` :
 
-![](picture/setting_one.png)
-![](picture/setting_two.png)
+![](chap0x01/picture/setting_one.png)
+![](chap0x01/picture/setting_two.png)
 
 重启 ssh 服务：
 
-![](picture/restart.png)
+![](chap0x01/picture/restart.png)
 
 重新用 cmd 登录，成功实现免密登录:
 
-![](picture/login_without_password.png)
+![](chap0x01/picture/login_without_password.png)
 
 ---
 
