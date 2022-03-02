@@ -11,19 +11,19 @@
 
 ## Solve:
 
-0.打开虚拟机，用主机的 cmd 命令行 `ssh` 指令连接
+0.打开虚拟机，用主机的 cmd 命令行 `ssh` 指令连接：
 
 ![login in](chap0x01/picture/login_in.png)
 
 ---
 
-1.用 `lsb_release -a` 查询当前Linux发行版基本信息
+1.用 `lsb_release -a` 查询当前Linux发行版基本信息：
 
 ![release info](chap0x01/picture/release.png)
 
 ---
 
-2.用 `uname -srm` 查询当前Linux内核版本信息
+2.用 `uname -srm` 查询当前Linux内核版本信息：
 
 ![core info](chap0x01/picture/core.png)
 
