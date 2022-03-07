@@ -9,6 +9,14 @@
 * 如何使用 scp 在「虚拟机和宿主机之间」、「本机和远程 Linux 系统之间」传输文件？
 * 如何配置 SSH 免密登录?
 
+## Environment:
+
+宿主机： Mircosoft Windows 10 家庭版
+
+虚拟机：Ubuntu 20.04 服务器版
+
+远程主机：阿里云远程 Linux
+
 ## Solve:
 
 0.打开虚拟机，用主机的 cmd 命令行 `ssh` 指令连接：
@@ -42,13 +50,17 @@
 ![](chap0x01/picture/all_network.png)
 
 发现新添加的 `enp0s9` 网卡未启用
-用 `sudo vi /etc/netplan/00-installer-config.yaml` 打开配置文件
+用 
+```bash
+sudo vi /etc/netplan/00-installer-config.yaml
+``` 
+打开配置文件
 
 ![setting](chap0x01/picture/setting.png)
 
 在其下添加新的配置：
 
-```
+```bash
 enp0s9:
     dhcp4: true
 ```
@@ -71,7 +83,7 @@ enp0s9:
 4.1 用 `scp` 传输文件至虚拟机
 退到 Windows 自己的 cmd 命令行界面，用 `scp` 指令传输文件：
 
-```
+```bash
 scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 ```
 ![sent file](chap0x01/picture/scp_sent_file.png)
@@ -80,7 +92,33 @@ scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 
 ![check](chap0x01/picture/check_file.png)
 
-4.2 用 `scp` 传输文件至远程Linux系统
+4.2 用 `scp` 将文件从虚拟机下载到宿主机
+
+先在虚拟机中创建文件 `test.txt` 并输入特定文本内容:
+
+<center>"This is a test on Ubuntu"</center>
+<br>
+
+```bash
+vi test.txt
+```
+
+![create test](chap0x01/picture/create_test.png)
+
+![create test success](chap0x01/picture/create_test_success.png)
+
+然后退出虚拟机连接，用 `scp` 指令从虚拟机上将 `test.txt` 下载至本地 D 盘
+
+```bash
+scp cuc@192.168.56.101:~/test.txt D:\
+```
+
+![download test](chap0x01/picture/scp_download.png)
+
+![download success](chap0x01/picture/download_success.png)
+
+
+4.3 用 `scp` 传输文件至远程Linux系统
 
 利用阿里云线上云服务的环境创建远程虚拟机：
 
@@ -88,7 +126,7 @@ scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 
 用 `scp` 传输文件 `test.txt`
 
-```
+```bash
 scp C:\Users\lenovo\Desktop\test.txt root@101.133.153.138:~
 ```
 
@@ -103,13 +141,13 @@ scp C:\Users\lenovo\Desktop\test.txt root@101.133.153.138:~
 5.
 提前已经用命令设置好了 ssh 公钥
 
-```
+```bash
 ssh-keygen -t rsa
 ```
 
 接第四题后的操作，已经将 `id_rsa.pub` 传输至虚拟机
 设置 Ubuntu 公钥：
-```
+```bash
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
@@ -117,7 +155,7 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 设置属性：
 
-```
+```bash
 sudo chmod 600 authorized_keys
 sudo chmod 700 ~/.ssh
 ```
@@ -130,6 +168,10 @@ sudo chmod 700 ~/.ssh
 ![](chap0x01/picture/setting_two.png)
 
 重启 ssh 服务：
+
+```bash
+systemctl restart ssh.service
+```
 
 ![](chap0x01/picture/restart.png)
 
@@ -151,6 +193,14 @@ sudo chmod 700 ~/.ssh
 ##### 解决：
 ssh 免密登录原理是通过 RSA 公私密钥对自动匹配从而省去输入密码这一项。然而在之前的 GitHub 设置中我提前生成了<strong>带有密码口令</strong>的 RSA 密钥，导致实际上仍然需要密码进行登录。
 我重新设置成了<strong>无密码口令</strong>的 RSA 密钥后再进行相同操作，成功实现免密登录。
+
+---
+
+3.从虚拟机向本地传输文件时无法连接，传输失败
+##### 解决：
+由于 Ubuntu 虚拟机是<strong>服务器端</strong>，不具备连接客户端并且传输文件的能力，所以应该由客户端在终端中使用 `scp` 请求将文件下载至本地而不是试图让服务端将文件传输过来。
+
+---
 
 ## 参考资料：
 
