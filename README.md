@@ -57,7 +57,7 @@ Ubuntu:
 
 Kali:
 
-![kali_auth]()
+![kali_auth](picture/kali_auth.png)
 
 开始录制：
 ```bash
