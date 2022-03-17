@@ -295,9 +295,11 @@ https://asciinema.org/a/hcyX94dkFlbTKBfBFB9rh74bE
 ## 参考资料：
 
 `asciinema` 个人空间:
+
 https://asciinema.org/~Ocean-fish
 
 参考资料:
+
 https://askubuntu.com/questions/151941/how-can-you-completely-remove-a-package
 
 https://www.runoob.com/linux/linux-comm-find.html
