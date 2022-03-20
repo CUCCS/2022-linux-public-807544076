@@ -21,33 +21,33 @@
 
 0.打开虚拟机，用主机的 cmd 命令行 `ssh` 指令连接：
 
-![login in](chap0x01/picture/login_in.png)
+![login in](picture/login_in.png)
 
 ---
 
 1.用 `lsb_release -a` 查询当前Linux发行版基本信息：
 
-![release info](chap0x01/picture/release.png)
+![release info](picture/release.png)
 
 ---
 
 2.用 `uname -srm` 查询当前Linux内核版本信息：
 
-![core info](chap0x01/picture/core.png)
+![core info](picture/core.png)
 
 ---
 
 3.
 首先在虚拟机设置页面添加新的网卡 `网卡3` 在 Ubuntu 内显示为 `enp0s9`
 
-![add new network](chap0x01/picture/add_new_network.png)
+![add new network](picture/add_new_network.png)
 
 用 `ifconfig` 和 `ifconfig -a` 分别查看工作网卡和所有网卡
 
 工作网卡：
-![](chap0x01/picture/working_network.png)
+![](picture/working_network.png)
 所有网卡：
-![](chap0x01/picture/all_network.png)
+![](picture/all_network.png)
 
 发现新添加的 `enp0s9` 网卡未启用
 用 
@@ -56,7 +56,7 @@ sudo vi /etc/netplan/00-installer-config.yaml
 ``` 
 打开配置文件
 
-![setting](chap0x01/picture/setting.png)
+![setting](picture/setting.png)
 
 在其下添加新的配置：
 
@@ -65,15 +65,15 @@ enp0s9:
     dhcp4: true
 ```
 
-![add setting](chap0x01/picture/add_setting.png)
+![add setting](picture/add_setting.png)
 
 随后保存退出文档，使用 `sudo netplan apply` 指令应用更改
 
-![apply setting](chap0x01/picture/apply_setting.png)
+![apply setting](picture/apply_setting.png)
 
 重启虚拟机并重新连接，再次查看网卡工作情况，发现其自动开始工作并获取ip
 
-![applying](chap0x01/picture/applying.png)
+![applying](picture/applying.png)
 
 ---
 
@@ -86,11 +86,11 @@ enp0s9:
 ```bash
 scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 ```
-![sent file](chap0x01/picture/scp_sent_file.png)
+![sent file](picture/scp_sent_file.png)
 
 传输成功后连接虚拟机查看结果
 
-![check](chap0x01/picture/check_file.png)
+![check](picture/check_file.png)
 
 4.2 用 `scp` 将文件从虚拟机下载到宿主机
 
@@ -103,9 +103,9 @@ scp C:\Users\lenovo\.ssh\id_rsa.pub cuc@192.168.56.101:~/.ssh
 vi test.txt
 ```
 
-![create test](chap0x01/picture/create_test.png)
+![create test](picture/create_test.png)
 
-![create test success](chap0x01/picture/create_test_success.png)
+![create test success](picture/create_test_success.png)
 
 然后退出虚拟机连接，用 `scp` 指令从虚拟机上将 `test.txt` 下载至本地 D 盘
 
@@ -113,16 +113,16 @@ vi test.txt
 scp cuc@192.168.56.101:~/test.txt D:\
 ```
 
-![download test](chap0x01/picture/scp_download.png)
+![download test](picture/scp_download.png)
 
-![download success](chap0x01/picture/download_success.png)
+![download success](picture/download_success.png)
 
 
 4.3 用 `scp` 传输文件至远程Linux系统
 
 利用阿里云线上云服务的环境创建远程虚拟机：
 
-![create remote linux](chap0x01/picture/create_remote_linux.png)
+![create remote linux](picture/create_remote_linux.png)
 
 用 `scp` 传输文件 `test.txt`
 
@@ -130,11 +130,11 @@ scp cuc@192.168.56.101:~/test.txt D:\
 scp C:\Users\lenovo\Desktop\test.txt root@101.133.153.138:~
 ```
 
-![sent file](chap0x01/picture/sent_file.png)
+![sent file](picture/sent_file.png)
 
 在云端主机查看：
 
-![check](chap0x01/picture/sent_to_remote.png)
+![check](picture/sent_to_remote.png)
 
 ---
 
@@ -151,7 +151,7 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-![](chap0x01/picture/cat.png)
+![](picture/cat.png)
 
 设置属性：
 
@@ -160,12 +160,12 @@ sudo chmod 600 authorized_keys
 sudo chmod 700 ~/.ssh
 ```
 
-![](chap0x01/picture/chmod.png)
+![](picture/chmod.png)
 
 修改 Ubuntu 的 `/etc/ssh/sshd_config` :
 
-![](chap0x01/picture/setting_one.png)
-![](chap0x01/picture/setting_two.png)
+![](picture/setting_one.png)
+![](picture/setting_two.png)
 
 重启 ssh 服务：
 
@@ -173,11 +173,11 @@ sudo chmod 700 ~/.ssh
 systemctl restart ssh.service
 ```
 
-![](chap0x01/picture/restart.png)
+![](picture/restart.png)
 
 重新用 cmd 登录，成功实现免密登录:
 
-![](chap0x01/picture/login_without_password.png)
+![](picture/login_without_password.png)
 
 ---
 
