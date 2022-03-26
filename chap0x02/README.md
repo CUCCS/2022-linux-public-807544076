@@ -1,5 +1,5 @@
 # Linux - H2
-> author: 2020212063017 邱纪霖
+> author: oceanfish
  ---
 ## Homework:
 使用表格方式记录至少 2 个不同 Linux 发行版本上以下信息的获取方法，使用 asciinema 录屏方式「分段」记录相关信息的获取过程和结果
@@ -159,13 +159,13 @@ which tshark
 ```
 
 Ubuntu `asciinema` 录屏地址:
-https://asciinema.org/a/8s4BCXZUkc0MFKxbpzuBC5MFp
+[![asciicast](https://asciinema.org/a/8s4BCXZUkc0MFKxbpzuBC5MFp.svg)](https://asciinema.org/a/8s4BCXZUkc0MFKxbpzuBC5MFp)
 
 Kali `asciinema` 录屏地址:
-https://asciinema.org/a/yow1rBRPALyH0DJaTs6k9mC4Z
+[![asciicast](https://asciinema.org/a/yow1rBRPALyH0DJaTs6k9mC4Z.svg)](https://asciinema.org/a/yow1rBRPALyH0DJaTs6k9mC4Z)
 
 CentOS `asciinema` 录屏地址:
-https://asciinema.org/a/qPSWS2SI8JWukt2G8C1TLXL6y
+[![asciicast](https://asciinema.org/a/qPSWS2SI8JWukt2G8C1TLXL6y.svg)](https://asciinema.org/a/qPSWS2SI8JWukt2G8C1TLXL6y)
 
 ---
 
@@ -192,13 +192,13 @@ sudo grep -rIH "666"
 ```
 
 Ubuntu `asciinema` 录屏地址:
-https://asciinema.org/a/TXbHQn0d00M7TnEciuLS7aFqC
+[![asciicast](https://asciinema.org/a/TXbHQn0d00M7TnEciuLS7aFqC.svg)](https://asciinema.org/a/TXbHQn0d00M7TnEciuLS7aFqC)
 
 Kali `asciinema` 录屏地址:
-https://asciinema.org/a/P0Jn0avURKLSUI43mNQFipp5c
+[![asciicast](https://asciinema.org/a/P0Jn0avURKLSUI43mNQFipp5c.svg)](https://asciinema.org/a/P0Jn0avURKLSUI43mNQFipp5c)
 
 CentOS `asciinema` 录屏地址:
-https://asciinema.org/a/DwMcErtLAdkgYZYsM40Qkn60W
+[![asciicast](https://asciinema.org/a/DwMcErtLAdkgYZYsM40Qkn60W.svg)](https://asciinema.org/a/DwMcErtLAdkgYZYsM40Qkn60W)
 
 ---
 
@@ -284,13 +284,13 @@ rar x test.rar # decompress
 ```
 
 Ubuntu `asciinema` 录屏地址:
-https://asciinema.org/a/BOJXmYm7AVOGlxbgdiXNJK5fM
+[![asciicast](https://asciinema.org/a/BOJXmYm7AVOGlxbgdiXNJK5fM.svg)](https://asciinema.org/a/BOJXmYm7AVOGlxbgdiXNJK5fM)
 
 Kali `asciinema` 录屏地址:
-https://asciinema.org/a/hpqMXFCMDep3hxSNVqCPgHG2p
+[![asciicast](https://asciinema.org/a/hpqMXFCMDep3hxSNVqCPgHG2p.svg)](https://asciinema.org/a/hpqMXFCMDep3hxSNVqCPgHG2p)
 
 CentOS `asciinema` 录屏地址:
-https://asciinema.org/a/SDn9ub13s7ZUGKKV7tp7lZ66o
+[![asciicast](https://asciinema.org/a/DwMcErtLAdkgYZYsM40Qkn60W.svg)](https://asciinema.org/a/DwMcErtLAdkgYZYsM40Qkn60W)
 
 ---
 
@@ -354,13 +354,13 @@ ps aux | grep ping
 成功
 
 Ubuntu `asciinema` 录屏地址:
-https://asciinema.org/a/MKfErmCeDqkK9eG8OhT1o9pko
+[![asciicast](https://asciinema.org/a/MKfErmCeDqkK9eG8OhT1o9pko.svg)](https://asciinema.org/a/MKfErmCeDqkK9eG8OhT1o9pko)
 
 Kali `asciinema` 录屏地址:
-https://asciinema.org/a/6kVroKhEJUu75LOuwqtWWAAWs
+[![asciicast](https://asciinema.org/a/6kVroKhEJUu75LOuwqtWWAAWs.svg)](https://asciinema.org/a/6kVroKhEJUu75LOuwqtWWAAWs)
 
 CentOS `asciinema` 录屏地址:
-https://asciinema.org/a/He3vLIGEir6eBFuJ1wssNPf72
+[![asciicast](https://asciinema.org/a/He3vLIGEir6eBFuJ1wssNPf72.svg)](https://asciinema.org/a/He3vLIGEir6eBFuJ1wssNPf72)
 
 ---
 
@@ -371,13 +371,13 @@ sudo lshw
 ```
 
 Ubuntu `asciinema` 录屏地址:
-https://asciinema.org/a/NuVh3UPODBaRDMgbltiej7O8g
+[![asciicast](https://asciinema.org/a/NuVh3UPODBaRDMgbltiej7O8g.svg)](https://asciinema.org/a/NuVh3UPODBaRDMgbltiej7O8g)
 
 Kali `asciinema` 录屏地址:
-https://asciinema.org/a/hcyX94dkFlbTKBfBFB9rh74bE
+[![asciicast](https://asciinema.org/a/hcyX94dkFlbTKBfBFB9rh74bE.svg)](https://asciinema.org/a/hcyX94dkFlbTKBfBFB9rh74bE)
 
 CentOS `asciinema` 录屏地址:
-https://asciinema.org/a/75CkVp46XRV5ut2jp6Hf7Ghpg
+[![asciicast](https://asciinema.org/a/75CkVp46XRV5ut2jp6Hf7Ghpg.svg)](https://asciinema.org/a/75CkVp46XRV5ut2jp6Hf7Ghpg)
 
 ---
 
@@ -385,24 +385,24 @@ https://asciinema.org/a/75CkVp46XRV5ut2jp6Hf7Ghpg
 
 `asciinema` 个人空间:
 
-https://asciinema.org/~Ocean-fish
+[Ocean-fish的个人空间](https://asciinema.org/~Ocean-fish)
 
 参考资料:
 
-https://askubuntu.com/questions/151941/how-can-you-completely-remove-a-package
+[如何完全删除一个包](https://askubuntu.com/questions/151941/how-can-you-completely-remove-a-package)
 
-https://www.runoob.com/linux/linux-comm-find.html
+[find命令详解](https://www.runoob.com/linux/linux-comm-find.html)
 
-https://askubuntu.com/questions/127892/how-to-find-a-text-file-which-contains-a-specific-word-inside-not-in-its-name
+[如何寻找标内容含有特点字符串的文件](https://askubuntu.com/questions/127892/how-to-find-a-text-file-which-contains-a-specific-word-inside-not-in-its-name)
 
-https://askubuntu.com/questions/443830/delete-all-files-whose-filenames-contain-a-particular-string
+[如何批量删除文件名含有特定内容的文件](https://askubuntu.com/questions/443830/delete-all-files-whose-filenames-contain-a-particular-string)
 
-https://askubuntu.com/questions/660846/how-to-zip-and-unzip-a-directory-and-its-files-in-linux
+[zip/unzip讲解](https://askubuntu.com/questions/660846/how-to-zip-and-unzip-a-directory-and-its-files-in-linux)
 
-https://askubuntu.com/questions/31618/how-can-i-find-my-hardware-details
+[如何查看硬件信息](https://askubuntu.com/questions/31618/how-can-i-find-my-hardware-details)
 
-https://www.redhat.com/sysadmin/how-manage-packages
+[CentOS的包管理系统](https://www.redhat.com/sysadmin/how-manage-packages)
 
-https://razeencheng.com/posts/how-to-install-tshark-on-centos/
+[CentOS如何安装tshark](https://razeencheng.com/posts/how-to-install-tshark-on-centos/)
 
-https://www.cyberciti.biz/faq/check-list-installed-packages-in-centos-linux/
+[CentOS查看安装包列表](https://www.cyberciti.biz/faq/check-list-installed-packages-in-centos-linux/)
