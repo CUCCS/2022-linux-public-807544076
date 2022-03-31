@@ -245,14 +245,14 @@ $ sudo journalctl /usr/bin/bash
 $ sudo journalctl _UID=33 --since today
 
     # 查看某个 Unit 的日志
-    $ sudo journalctl -u sshd.service
-    $ sudo journalctl -u nginx.service --since today
+    $ sudo journalctl -u atd.service
+    $ sudo journalctl -u atd.service --since today
 
     # 实时滚动显示某个 Unit 的最新日志
-    $ sudo journalctl -u nginx.service -f
+    $ sudo journalctl -u dbus.service -f
 
     # 合并显示多个 Unit 的日志
-    $ journalctl -u nginx.service -u php-fpm.service --since today
+    $ journalctl -u dbus.service -u atd.service --since today
 
 # 查看指定优先级（及其以上级别）的日志，共有8级
 # 0: emerg
@@ -269,10 +269,10 @@ $ sudo journalctl -p err -b
 $ sudo journalctl --no-pager
 
 # 以 JSON 格式（单行）输出
-$ sudo journalctl -b -u nginx.service -o json
+$ sudo journalctl -b -u dbus.service -o json
 
 # 以 JSON 格式（多行）输出，可读性更好
-$ sudo journalctl -b -u nginx.serviceqq
+$ sudo journalctl -b -u dbus.serviceqq
  -o json-pretty
 
 # 显示日志占据的硬盘空间
@@ -284,3 +284,11 @@ $ sudo journalctl --vacuum-size=1G
 # 指定日志文件保存多久
 $ sudo journalctl --vacuum-time=1years
 ```
+
+[![asciicast](https://asciinema.org/a/483055.svg)](https://asciinema.org/a/483055)
+
+---
+
+### Systemd 入门教程：实战篇 by 阮一峰的网络日志
+
+####
