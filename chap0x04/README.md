@@ -1,5 +1,4 @@
 # H4
-<<<<<<< HEAD
 > author: OceanFish
 
 ## 题目：
@@ -584,6 +583,4 @@ done
 [将管道输出赋值给 Shell 中的变量](https://blog.csdn.net/qq_33401821/article/details/112280124)
 
 [Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
-=======
-> author: OceanFish
->>>>>>> 9828b40af2721c543668758c7471a04d63c30aaf
+
