@@ -1,3 +1,4 @@
 #! /bin/bash
 
-bash ./task3.sh -h
+pwd
+# bash ./task3.sh -h
