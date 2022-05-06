@@ -133,7 +133,7 @@ do
             done
             for file in "${files[@]}"
             do
-                convert -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '$TEXT'" "$file" "watermarkd_$file"
+                convert -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$file"
             done
         ;;
 
@@ -259,8 +259,9 @@ do
             Version: 1.0 
             Author: Oceanfish
             -----------------------------------------------------------------------
-            Usage: ./task1.sh [operations] [argument(s)]
-
+            Usage: 
+                ./task1.sh [operations] [argument(s)]
+                
                 operations:
                     -j <file_name> [<file_name>] 压缩 jpg 文件
                     -J <path> 批量压缩文件夹里所有 jpg 文件
