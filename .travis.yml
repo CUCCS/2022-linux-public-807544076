@@ -1,0 +1,17 @@
+language: bash
+
+before_install: 
+  - sudo apt-get update  
+  - sudo apt install p7zip-full
+  - sudo apt install jpegoptim
+  - sudo apt install imagemagick
+  - sudo apt install ghostscript
+  - wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
+  - wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
+  - 7z e web_log.tsv.7z
+  - mv worldcupplayerinfo.tsv ./chap0x04
+  - mv web_log.tsv ./chap0x04
+
+script:
+  - bash ./chap0x04/test.sh
+
