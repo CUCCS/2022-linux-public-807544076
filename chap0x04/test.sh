@@ -1,4 +1,5 @@
 #! /bin/bash
 
 pwd
-# bash ./task3.sh -h
+cd ./chap0x04 || exit
+bash ./task3.sh -h
