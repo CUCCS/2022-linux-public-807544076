@@ -1,3 +1,3 @@
 #! /bin/bash
 
-bash task3.sh -h
+bash ./task3.sh -h
