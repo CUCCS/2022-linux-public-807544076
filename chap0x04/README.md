@@ -133,7 +133,7 @@ do
             done
             for file in "${files[@]}"
             do
-                convert -font helvetica -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '$TEXT'" "$file" "watermarkd_$file"
+                convert -font C059-BdIta -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '$TEXT'" "$file" "watermarkd_$file"
             done
         ;;
 
@@ -147,17 +147,17 @@ do
             for file in $(ls | find -name "*.jpg")
             do
                 n_file="${file:2}" 
-                convert -font helvetica -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$n_file"
+                convert -font C059-BdIta -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$n_file"
             done
             for file in $(ls | find -name "*.png")
             do
                 n_file="${file:2}"
-                convert -font helvetica -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$n_file"
+                convert -font C059-BdIta -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$n_file"
             done
             for file in $(ls | find -name "*.svg")
             do
                 n_file="${file:2}"
-                convert -font helvetica -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$n_file"
+                convert -font C059-BdIta -undercolor Black -fill blue -pointsize 100 -draw "text 100,100 '${sub[1]}'" "$file" "watermarkd_$n_file"
             done
         ;;
         r)
