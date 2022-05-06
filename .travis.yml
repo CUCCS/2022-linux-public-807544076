@@ -9,5 +9,5 @@ before_install:
   - mv web_log.tsv ./chap0x04
 
 script:
-  - bash test.sh
+  - bash ./chap0x04/test.sh
 
